@@ -1,10 +1,11 @@
 # Django settings for plag project.
+import os 
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Chiteri, Martin Akolo', 'chiteri@geek.co.ke'),
 )
 
 MANAGERS = ADMINS
@@ -29,7 +30,7 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Africa/Nairobi'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -71,7 +72,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    # Don't forget to use absolute paths, not relative paths. 
+    os.path.join(os.path.dirname(__file__), 'static').replace('\\','/'), 
 )
 
 # List of finder classes that know how to find static files in
@@ -110,7 +112,8 @@ WSGI_APPLICATION = 'plag.wsgi.application'
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    # Don't forget to use absolute paths, not relative paths. 
+    os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
 )
 
 INSTALLED_APPS = (
