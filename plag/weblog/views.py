@@ -5,13 +5,13 @@ from plag.weblog.models import Weblog, Category
 
 class WeblogList(ListView):
     model = Weblog 
-    template = 'post_list.html' 
+    template = 'weblog_list.html' 
     paginate_by = 7
-    # context_object_name = 'web_log'
+    # context_object_name = 'weblog'
     # queryset = Weblog.objects.all() 
 	
 class WeblogDetail(DetailView):
     model = Weblog 
-    template = 'post_detail.html' 
+    template = 'weblog_detail.html' 
     # context_object_name = 'web_log'
     queryset = Weblog.objects.all()

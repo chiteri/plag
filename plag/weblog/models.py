@@ -74,7 +74,7 @@ class Weblog(models.Model):
         self.body_html = markdown(self.body) 
         if self.excerpt: 
             self.excerpt_html = markdown(self.excerpt) 
-        super(Post, self).save(force_insert, force_update)
+        super(Weblog, self).save(force_insert, force_update)
 		
     def get_absolute_url(self):  
-        return "/post/%s/%s/" % (self.pub_date.strftime("%Y/%b/%d").lower(), self.slug )
+        return "/weblog/%s/%s/" % (self.pub_date.strftime("%Y/%b/%d").lower(), self.slug )
