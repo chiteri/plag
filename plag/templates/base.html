@@ -32,17 +32,17 @@
     <div class="container">
 
       <div class="masthead">
-        <h3 class="muted">.Ke.Co.Geek/ </h3>
+        <h3 class="muted"> <a href="/"> .Chiteri's blog </a> </h3>
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li class="active"><a href="/">Geek.Co.KE</a></li>
+                <li class="active"><a href="/weblog/"> Weblog </a></li>
                 <li><a href="/about/">About</a></li>
                 <li><a href="/contacts/">Contact</a></li>
                 <!-- <li><a href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">Downloads</a></li>
-                <li><a href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">About</a></li>
-                <li><a href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">Contact</a></li> --> 
+                <li><a href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">Links</a></li>
+                <li><a href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">Gallery</a></li> --> 
               </ul>
             </div>
           </div>
@@ -52,34 +52,16 @@
       <!-- Jumbotron --> 
 	{% block main_content %} 
 		{% for post in web_logs %}
-      <!-- <div class="jumbotron">
-        <h1>Marketing stuff!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <a class="btn btn-large btn-success" href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">Get started today</a> 
-		
-		<h4> <a href="{{ post.get_absolute_url }}"> {{ post.title  }} </a> </h4>
-      </div> --> 
-	   <h4> <a href="{{ post.get_absolute_url }}"> {{ post.title  }} </a> </h4>
+	   <h4> <a href="{{ post.get_absolute_url }}"> {{ post.title  }} </a> </h4> <br />
       <!-- <hr> --> 
 
       <!-- Example row of columns -->
       <div class="row-fluid">
         <div class="span12">
           <!-- <h2>Heading</h2> --> 
-          <p> {{ post.excerpt_html|truncatewords_html:"200"|safe }} </p>
+          {{ post.excerpt_html|truncatewords_html:"200"|safe }} <br />
           <p><a class="btn" href="{{ post.get_absolute_url }}"> Read details » </a></p>
-        </div>
-        <!-- <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">View details »</a></p>
-       </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn" href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">View details »</a></p>
         </div> 
-		--> 
       </div>
 	  {% endfor %}
 	{% endblock %}
@@ -89,7 +71,7 @@
 		<span id="site-generator" class="pull-left">
             <a href="http://www.python.org"> <img src="http://www.python.org/community/logos/python-powered-h-50x65.png" alt="Python powered" title="Python Powered" /> </a> 
             <a href="http://www.djangoproject.com/"><img src="https://djangoproject.com/s/img/badges/djangojoint107x25.gif" border="0" alt="A Django joint" title="A Django joint" /></a>								
-            <a href="https://github.com/chiteri/plag/" alt="Plag weblog's sources at Github" > <strong> Plag's Source code </strong> <em> @ Github </em> </a> 
+            <a href="https://github.com/chiteri/plag/" alt="Weblog's sources at Github" > <strong> Source code </strong> <em> @ Github </em> </a> 
          </span><!-- #site-generator -->
         <span class="pull-right"> <h6> A Kenyan Geek © 2013 </h6> </span>
       </div>
@@ -113,6 +95,5 @@
     <script src="/static/scripts/bootstrap/bootstrap-carousel.js"></script>
     <script src="/static/scripts/bootstrap/bootstrap-typeahead.js"></script>
 
-  
-
-</body></html>
+	</body>
+</html>
