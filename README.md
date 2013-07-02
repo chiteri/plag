@@ -3,7 +3,7 @@ plag
 
 My personal blog, to be hosted at http://www.Geek.Co.Ke/
 
-This project named ``Plag' so that it appears intentionally to be a contortion of the word ``Blog'' but with a fake American accent ``Bræg''. The letter ``B'' at the beginning is replaced with a ``P'' for reasons of cultural solidarity :-P 
+This project named ``Plag' so that it appears intentionally to be a contortion of the word ``Blog'' but with a fake American accent ``Blæg''. The letter ``B'' at the beginning is replaced with a ``P'' for reasons of cultural solidarity :-P 
 
 *Requirements* 
 
