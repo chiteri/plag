@@ -25,7 +25,7 @@ from dj_static import Cling
 # if running multiple sites in the same mod_wsgi process. To fix this, use
 # mod_wsgi daemon mode with each site in its own daemon process, or use
 # os.environ["DJANGO_SETTINGS_MODULE"] = "plag_real.settings"
-# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "plag.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "plag.settings")
 
 application = Cling(get_wsgi_application())
 
